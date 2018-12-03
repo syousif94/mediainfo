@@ -12,6 +12,9 @@
 		53C2184D21AAC48D00B2D2F5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C2184B21AAC48D00B2D2F5 /* MainMenu.xib */; };
 		53C2185921AAC48D00B2D2F5 /* MediaInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C2185821AAC48D00B2D2F5 /* MediaInfoTests.swift */; };
 		53C2186421AAC48D00B2D2F5 /* MediaInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C2186321AAC48D00B2D2F5 /* MediaInfoUITests.swift */; };
+		53C2187521AAC68B00B2D2F5 /* NowPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C2187421AAC68B00B2D2F5 /* NowPlaying.m */; };
+		53C2187821AAC93300B2D2F5 /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C2187721AAC93300B2D2F5 /* MediaRemote.framework */; };
+		53FEE05E21ABB6F200A34C1A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FEE05D21ABB6F200A34C1A /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,11 @@
 		53C2185F21AAC48D00B2D2F5 /* MediaInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C2186321AAC48D00B2D2F5 /* MediaInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoUITests.swift; sourceTree = "<group>"; };
 		53C2186521AAC48D00B2D2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C2187221AAC68A00B2D2F5 /* MediaInfo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MediaInfo-Bridging-Header.h"; sourceTree = "<group>"; };
+		53C2187321AAC68B00B2D2F5 /* NowPlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlaying.h; sourceTree = "<group>"; };
+		53C2187421AAC68B00B2D2F5 /* NowPlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlaying.m; sourceTree = "<group>"; };
+		53C2187721AAC93300B2D2F5 /* MediaRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemote.framework; path = ../../../../System/Library/PrivateFrameworks/MediaRemote.framework; sourceTree = "<group>"; };
+		53FEE05D21ABB6F200A34C1A /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C2187821AAC93300B2D2F5 /* MediaRemote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 				53C2185721AAC48D00B2D2F5 /* MediaInfoTests */,
 				53C2186221AAC48D00B2D2F5 /* MediaInfoUITests */,
 				53C2184521AAC48B00B2D2F5 /* Products */,
+				53C2187621AAC93200B2D2F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,11 +104,15 @@
 		53C2184621AAC48B00B2D2F5 /* MediaInfo */ = {
 			isa = PBXGroup;
 			children = (
+				53C2187321AAC68B00B2D2F5 /* NowPlaying.h */,
+				53C2187421AAC68B00B2D2F5 /* NowPlaying.m */,
 				53C2184721AAC48B00B2D2F5 /* AppDelegate.swift */,
+				53FEE05D21ABB6F200A34C1A /* Images.swift */,
 				53C2184921AAC48D00B2D2F5 /* Assets.xcassets */,
 				53C2184B21AAC48D00B2D2F5 /* MainMenu.xib */,
 				53C2184E21AAC48D00B2D2F5 /* Info.plist */,
 				53C2184F21AAC48D00B2D2F5 /* MediaInfo.entitlements */,
+				53C2187221AAC68A00B2D2F5 /* MediaInfo-Bridging-Header.h */,
 			);
 			path = MediaInfo;
 			sourceTree = "<group>";
@@ -119,6 +133,14 @@
 				53C2186521AAC48D00B2D2F5 /* Info.plist */,
 			);
 			path = MediaInfoUITests;
+			sourceTree = "<group>";
+		};
+		53C2187621AAC93200B2D2F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53C2187721AAC93300B2D2F5 /* MediaRemote.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +211,7 @@
 				TargetAttributes = {
 					53C2184321AAC48B00B2D2F5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					53C2185321AAC48D00B2D2F5 = {
 						CreatedOnToolsVersion = 10.1;
@@ -252,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				53C2184821AAC48B00B2D2F5 /* AppDelegate.swift in Sources */,
+				53FEE05E21ABB6F200A34C1A /* Images.swift in Sources */,
+				53C2187521AAC68B00B2D2F5 /* NowPlaying.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MediaInfo/MediaInfo.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5E7D5R7C83;
@@ -428,7 +453,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syousif.MediaInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MediaInfo/MediaInfo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -436,7 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MediaInfo/MediaInfo.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5E7D5R7C83;
@@ -447,7 +478,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syousif.MediaInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MediaInfo/MediaInfo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
